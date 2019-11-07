@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+
+.picture {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.restaurant-card {
+    width: 80%;
+    background: lightcoral;
+    justify-content: center;
+}
+
+.infromation {
+
+    margin-bottom: 20px;
+    text-align: center;
+}
