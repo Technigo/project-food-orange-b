@@ -31,7 +31,7 @@ fetch(url, { headers: { "user-key": apiKey } })
             document.getElementById("resto-card").innerHTML += `
             <div class="restaurant-card">
                 <div>
-                    <div>${resto.restaurant.name}</div> 
+                    <h3>${resto.restaurant.name}</h3> 
                     <div>${priceClass}</div>
                     <img src= "${resto.restaurant.photos[0].photo.thumb_url}">
                 </div>
