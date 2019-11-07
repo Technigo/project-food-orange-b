@@ -8,6 +8,8 @@ fetch(url, { headers: { "user-key": apiKey } })
     .then(res => res.json())
     .then(json => {
         console.log(json)
-
+        json.restaurants.forEach((resto) => {
+            document.getElementById("resto-card").innerHTML += `<div>${resto.restaurant.name}</div>`
+        })
 
     })
