@@ -18,6 +18,7 @@ fetch(url, {
         console.log(json)
         json.restaurants.forEach((resto) => {
 
+
             console.log(resto.restaurant)
             // price-range symbols
             let priceRange = resto.restaurant.price_range
@@ -46,7 +47,7 @@ fetch(url, {
                     <p>${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</p>
                     <p>${resto.restaurant.location.address}</p>
                 </div>
-            </div>`
+            </div>
 
         })
 
