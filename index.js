@@ -2,6 +2,7 @@ const apiKey = `2dc1d3eeeb4b37cf64e1bdf65a6c3db9`
 const cityId = 282
 const cuisineId = 182
 
+
 const url = `https://developers.zomato.com/api/v2.1/search?entity_id=282&entity_type=city&cuisines=182
 `
 
@@ -31,36 +32,36 @@ const getRestaurants = (filter) => {
 
 
                     document.getElementById("resto-card").innerHTML += `
-                <div class="restaurant-card">
-                <div>
-                    <h3>${resto.restaurant.name}</h3> 
-                    <div>${priceRangeInDollar}</div>
-                    <p>${resto.restaurant.price_range}</p>
-                <div class = "picture">
-                    <img src= "${resto.restaurant.thumb}">
+            <div class="restaurant-card">
+
+                <div class = "resto-pic">
+                <img src= "${resto.restaurant.thumb}">
                 </div>
-                <div class= "infromation">
-                <p>${resto.restaurant.cuisines}</p>
 
-                    <p class="name">${resto.restaurant.name}</p>
-                    <p> ${resto.restaurant.currency} ${resto.restaurant.average_cost_for_two} Average price for two people</p>
+                <div class="resto-info">
 
-                    <p>${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</p>
-                    <p>${resto.restaurant.location.address}</p>
+                    <div class="test">  
+                    <div class="name"><h4>${resto.restaurant.name}</h4></div>
+                    <br>
+                    <span class="price-range">${priceRangeInDollar}</span>
+                    <span class="cuisines">${resto.restaurant.cuisines}</span>
+                    <div>${resto.restaurant.location.address}</div>
+                </div>
+                <div class="resto-rating">
+
+                    <div>${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</div>
+ 
                 </div>
             </div>`
                 }
 
+
             })
 
                 }
 
             })
 
-
-        })
-
-}
 getRestaurants(["", true, true, true, true])
 
 const getPriceInDollar = (priceRange) => {

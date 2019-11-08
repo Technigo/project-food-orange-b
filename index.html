@@ -10,11 +10,17 @@
 </head>
 
 <body>
+
+    <header>
+        <h1>Breakfast in Las Vegas</h1>
+    </header>
     <div class="container">
 
-        <form id="filter-price">
-            <label for="filter">$</label>
-            <input type="checkbox" name="price" id="$" value="$"><br>
+
+        <aside>
+            <div class="filter">
+                <h4>Filter on price</h4>
+                <form id="filter-price">
 
 
             <header>
@@ -26,6 +32,15 @@
 
                         <input type="checkbox" name="price" id="d3">
                         <label for="d3">$$$</label><br>
+
+                    <input type="checkbox" name="price" id="d1">
+                    <label for="d1">$</label><br>
+                    <button id="filter-btn"> Filter </button>
+
+                </form>
+            </div>
+        </aside>
+        <div id="resto-card" class="resto-card"></div>
 
                         <input type="checkbox" name="price" id="d2">
                         <label for="d2">$$</label><br>
@@ -40,8 +55,11 @@
 
                 </div>
             </header>
+
     </div>
-    <div id="resto-card" class="resto-card"></div>
+
+
+
     <script src="index.js"></script>
 </body>
 
