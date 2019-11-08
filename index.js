@@ -35,6 +35,9 @@ fetch(url, {
             }
             document.getElementById("resto-card").innerHTML += `
             <div class="restaurant-card">
+                <div>
+                    <h3>${resto.restaurant.name}</h3> 
+                    <div>${priceClass}</div>
                 <div class = "picture">
                     <img src= "${resto.restaurant.photos[0].photo.thumb_url}">
                 </div>
