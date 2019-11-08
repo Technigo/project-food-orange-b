@@ -8,11 +8,16 @@ const url = `https://developers.zomato.com/api/v2.1/search?entity_id=282&cuisine
 
 
 
-fetch(url, { headers: { "user-key": apiKey } })
+fetch(url, {
+        headers: {
+            "user-key": apiKey
+        }
+    })
     .then(res => res.json())
     .then(json => {
         console.log(json)
         json.restaurants.forEach((resto) => {
+
 
             console.log(resto.restaurant)
             // price-range symbols
@@ -33,19 +38,21 @@ fetch(url, { headers: { "user-key": apiKey } })
                 <div>
                     <h3>${resto.restaurant.name}</h3> 
                     <div>${priceClass}</div>
+                <div class = "picture">
                     <img src= "${resto.restaurant.photos[0].photo.thumb_url}">
                 </div>
-                <div>
-                    <ul>${resto.restaurant.cuisines}</ul>
-                    <ul> ${resto.restaurant.currency} ${resto.restaurant.average_cost_for_two} Average price for two people</ul>
-                    <ul>${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</ul>
-                    <ul>${resto.restaurant.location.address}</ul>
+                <div class= "infromation">
+                <p>${resto.restaurant.cuisines}</p>
+                 
+                    <p>${priceClass}</p>
+                    <p class="name">${resto.restaurant.name}</p>
+                    <p> ${resto.restaurant.currency} ${resto.restaurant.average_cost_for_two} Average price for two people</p>
+                    <p>${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</p>
+                    <p>${resto.restaurant.location.address}</p>
                 </div>
-            </div>`
+            </div>
 
         })
 
 
     })
-
-
