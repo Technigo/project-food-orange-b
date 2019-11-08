@@ -1,8 +1,8 @@
-const apiKey = `0d2ae46a0d3314ac244b0da1e2d88315`
+const apiKey = `2dc1d3eeeb4b37cf64e1bdf65a6c3db9`
 const cityId = 282
 const cuisineId = 182
 
-const url = `https://developers.zomato.com/api/v2.1/search?entity_id=282&cuisines=182
+const url = `https://developers.zomato.com/api/v2.1/search?entity_id=282&entity_type=city&cuisines=182
 `
 
 
@@ -28,6 +28,8 @@ const getRestaurants = (filter) => {
                     console.log(resto.restaurant)
                     // price-range symbols
 
+
+
                     document.getElementById("resto-card").innerHTML += `
                 <div class="restaurant-card">
                 <div>
@@ -47,6 +49,9 @@ const getRestaurants = (filter) => {
                     <p>${resto.restaurant.location.address}</p>
                 </div>
             </div>`
+                }
+
+            })
 
                 }
 
@@ -71,7 +76,6 @@ const getPriceInDollar = (priceRange) => {
 }
 
 
-
 const filterByPriceRange = (event) => {
     event.preventDefault()
 
@@ -84,5 +88,6 @@ const filterByPriceRange = (event) => {
     console.log('filter', filter)
     getRestaurants(filter)
 }
+
 
 document.getElementById('filter-btn').onclick = filterByPriceRange
