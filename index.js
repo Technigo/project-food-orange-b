@@ -1,22 +1,24 @@
-const apiKey = `0d2ae46a0d3314ac244b0da1e2d88315`
+const apiKey = `2dc1d3eeeb4b37cf64e1bdf65a6c3db9`
 const cityId = 282
 const cuisineId = 182
 
-const url = `https://developers.zomato.com/api/v2.1/search?entity_id=282&cuisines=182`
+
+const url = `https://developers.zomato.com/api/v2.1/search?entity_id=282&entity_type=city&cuisines=182
+`
 
 
 
 const getRestaurants = (filter) => {
 
     fetch(url, {
-        headers: {
-            "user-key": apiKey
-        }
-    })
+            headers: {
+                "user-key": apiKey
+            }
+        })
 
         .then(res => res.json())
         .then(json => {
-            // console.log(json)
+            console.log(json)
             document.getElementById("resto-card").innerHTML = ""
 
             json.restaurants.forEach((resto) => {
@@ -26,6 +28,8 @@ const getRestaurants = (filter) => {
 
                     console.log(resto.restaurant)
                     // price-range symbols
+
+
 
                     document.getElementById("resto-card").innerHTML += `
             <div class="restaurant-card">
@@ -51,11 +55,13 @@ const getRestaurants = (filter) => {
             </div>`
                 }
 
+
             })
 
-        })
+                }
 
-}
+            })
+
 getRestaurants(["", true, true, true, true])
 
 const getPriceInDollar = (priceRange) => {
@@ -71,7 +77,6 @@ const getPriceInDollar = (priceRange) => {
 }
 
 
-
 const filterByPriceRange = (event) => {
     event.preventDefault()
 
@@ -85,6 +90,5 @@ const filterByPriceRange = (event) => {
     getRestaurants(filter)
 }
 
+
 document.getElementById('filter-btn').onclick = filterByPriceRange
-
-
