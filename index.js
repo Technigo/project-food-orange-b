@@ -10,14 +10,14 @@ const url = `https://developers.zomato.com/api/v2.1/search?entity_id=282&cuisine
 const getRestaurants = (filter) => {
 
     fetch(url, {
-        headers: {
-            "user-key": apiKey
-        }
-    })
+            headers: {
+                "user-key": apiKey
+            }
+        })
 
         .then(res => res.json())
         .then(json => {
-            // console.log(json)
+            console.log(json)
             document.getElementById("resto-card").innerHTML = ""
 
             json.restaurants.forEach((resto) => {
@@ -47,6 +47,10 @@ const getRestaurants = (filter) => {
                     <p>${resto.restaurant.location.address}</p>
                 </div>
             </div>`
+
+                }
+
+            })
 
 
         })
@@ -82,5 +86,3 @@ const filterByPriceRange = (event) => {
 }
 
 document.getElementById('filter-btn').onclick = filterByPriceRange
-
-
