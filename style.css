@@ -1,5 +1,12 @@
-body {
-    margin: 0;
+body, html{
+    margin: 0px;
+}
+
+header{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    
 }
 
 p {
@@ -7,10 +14,30 @@ p {
     text-align: -webkit-center;
 }
 
-.data {
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        
+        
+    }
+
+
+.filter{
+        width: 70%;
+        font-size: 18px;
+    }
+    
+/* .data {
     display: block;
     text-align: center;
-}
+} */
 
 
 form {
@@ -18,44 +45,71 @@ form {
     padding: 20px;
     width: 100px;
     height: 100px;
-    background: #ffffff73;
+  
 }
 
-.container {
-    background-image: url('header.jpg');
-    width: 100%;
-    height: 300px;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: top;
-    s
-}
-
-.picture {
-    padding: 30px;
+#resto-card{
+    width: 90%;
     display: flex;
-    justify-content: center;
-}
-
-.resto-card {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.resto-pic img{
+    display:block; /*remove inline-block spaces*/
+    width:100%; /*make image streatch*/
+    margin:-20% 0;
+}
+.resto-pic{
+    width:400px; /*container-width*/
+    height: 240px;
+    background-color: rgb(193, 191, 191);
+    overflow:hidden; /*hide bounds of image */
+    margin:0;   /*reset margin of figure tag*/
+    border-radius: 25px 25px 0px 0px;
+} 
+.restaurant-card{
+    width: 400px;
+    border-radius: 25px;
+    margin: 20px 10px 20px 10px;
+    box-shadow: 
+    inset 0 -3em 3em rgba(0,0,0,0.1), 
+          0 0  0 2px rgb(255,255,255),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
-.restaurant-card {
+.resto-info{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.resto-rating{
+    text-align: center;
+}
+
+/* .picture {
+    width: 400px;
+    border-radius: 25px;
+    margin: 20px 10px 20px 10px;
+    box-shadow: 
+    inset 0 -3em 3em rgba(0,0,0,0.1), 
+          0 0  0 2px rgb(255,255,255),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+} */
+
+
+/* .restaurant-card {
     width: 200px;
     background: gainsboro;
     text-align: justify;
     justify-content: center;
     padding: 20px;
     margin: 30px;
-}
-}
+} */
 
-.infromation {
+
+/* .infromation {
 
     margin-bottom: 20px;
     text-align: center;
-}
+} */
