@@ -2,9 +2,33 @@ body {
     margin: 0;
 }
 
+p {
+    margin: 0;
+    text-align: -webkit-center;
+}
+
+.data {
+    display: block;
+    text-align: center;
+}
+
+
+form {
+    display: block;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    background: #ffffff73;
+}
+
 .container {
+    background-image: url('header.jpg');
     width: 100%;
-    height: auto;
+    height: 300px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: top;
+    s
 }
 
 .picture {
@@ -13,10 +37,21 @@ body {
     justify-content: center;
 }
 
-.restaurant-card {
-    width: 80%;
-    background: lightcoral;
+.resto-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
+}
+
+.restaurant-card {
+    width: 200px;
+    background: gainsboro;
+    text-align: justify;
+    justify-content: center;
+    padding: 20px;
+    margin: 30px;
+}
 }
 
 .infromation {

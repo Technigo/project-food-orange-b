@@ -14,6 +14,7 @@ const getRestaurants = (filter) => {
             "user-key": apiKey
         }
     })
+
         .then(res => res.json())
         .then(json => {
             // console.log(json)
@@ -38,17 +39,14 @@ const getRestaurants = (filter) => {
                 </div>
                 <div class= "infromation">
                 <p>${resto.restaurant.cuisines}</p>
-                 
-                    
+
                     <p class="name">${resto.restaurant.name}</p>
                     <p> ${resto.restaurant.currency} ${resto.restaurant.average_cost_for_two} Average price for two people</p>
+
                     <p>${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</p>
                     <p>${resto.restaurant.location.address}</p>
                 </div>
             </div>`
-                }
-
-            })
 
 
         })
