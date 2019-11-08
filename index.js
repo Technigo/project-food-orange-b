@@ -56,11 +56,14 @@ const getRestaurants = (filter) => {
                 }
 
 
-            })
 
-                }
+
+
 
             })
+        })
+
+}
 
 getRestaurants(["", true, true, true, true])
 
