@@ -12,30 +12,23 @@
 <body>
     <div class="container">
 
+        <form id="filter-price">
+            <label for="filter">$</label>
+            <input type="checkbox" name="price" id="$" value="$"><br>
 
-        <header>
-            <div class="filter">
-                <form id="filter-price">
-                    <label for="filter">$</label>
-                    <input type="checkbox" name="price" id="$" value="$"><br>
+            <label for="filter">$$</label>
+            <input type="checkbox" name="price" id="$$" value="$$"><br>
 
-                    <label for="filter">$$</label>
-                    <input type="checkbox" name="price" id="$$" value="$$"><br>
+            <label for="filter">$$$</label>
+            <input type="checkbox" name="price" id="$$$" value="$$$"><br>
 
-                    <label for="filter">$$$</label>
-                    <input type="checkbox" name="price" id="$$$" value="$$$"><br>
+            <label for="filter">$$$$</label>
+            <input type="checkbox" name="price" id="$$$$" value="$$$$"><br>
+            <input type="submit" value="Submit">
 
-                    <label for="filter">$$$$</label>
-                    <input type="checkbox" name="price" id="$$$$" value="$$$$"><br>
-
-
-                    <input type="submit" value="Submit">
-
-                </form>
-            </div>
-        </header>
-        <div id="resto-card"></div>
+        </form>
     </div>
+    <div id="resto-card" class="resto-card"></div>
     <script src="index.js"></script>
 </body>
 

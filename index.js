@@ -35,22 +35,20 @@ fetch(url, {
             }
             document.getElementById("resto-card").innerHTML += `
             <div class="restaurant-card">
-                <div>
+                <div class="data">
                     <h3>${resto.restaurant.name}</h3> 
-                    <div>${priceClass}</div>
+                    <p class = "">${priceClass}</p>
+                    <p> ${resto.restaurant.currency} ${resto.restaurant.average_cost_for_two} Average price for two people</p>
                 <div class = "picture">
                     <img src= "${resto.restaurant.photos[0].photo.thumb_url}">
                 </div>
                 <div class= "infromation">
                 <p>${resto.restaurant.cuisines}</p>
-                 
-                    <p>${priceClass}</p>
-                    <p class="name">${resto.restaurant.name}</p>
-                    <p> ${resto.restaurant.currency} ${resto.restaurant.average_cost_for_two} Average price for two people</p>
+            
                     <p>${resto.restaurant.user_rating.aggregate_rating} ${resto.restaurant.user_rating.rating_text}</p>
                     <p>${resto.restaurant.location.address}</p>
                 </div>
-            </div>
+            </div>`
 
         })
 
