@@ -17,7 +17,7 @@ const getRestaurants = (filter) => {
 
         .then(res => res.json())
         .then(json => {
-            // console.log(json)
+            console.log(json)
             document.getElementById("resto-card").innerHTML = ""
 
             json.restaurants.forEach((resto) => {
@@ -49,6 +49,10 @@ const getRestaurants = (filter) => {
                     <p>${resto.restaurant.location.address}</p>
                 </div>
             </div>`
+                }
+
+            })
+
                 }
 
             })
